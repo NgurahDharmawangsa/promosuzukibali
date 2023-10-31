@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cars Promotion</title>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+			integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+			crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<style>
+			nav.navbar {
+				height: 68px;
+			}
+			.select2.select2-container.select2-container--default {
+				width: 400px !important;
+			}
+			.select2-selection.select2-selection--single {
+				background-color: #f5f5f5 !important;
+				height: 48px;
+			}
+			span.select2-selection__rendered {
+				height: 48px;
+				line-height: 48px !important;
+			}
+			span.select2-selection__arrow {
+				height: 48px !important;
+			}
+
+			.center-img {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50%;
+			}
+            .swiper-button-prev.swiper-button-disabled{
+                display: none !important;
+            }
+
+			#mpv-car {
+				border: 2px solid black;
+			}
+			#mpv-car:hover {
+				border: 2px solid #12a7c8;
+				box-shadow: 4px 4px 6px 0px #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<nav class="navbar navbar-light bg-white shadow">
+                <img src="https://promomobilsuzukibali.com/wp-content/uploads/2023/01/banner-logo-suzuki.png" alt="" width="290px" height="50px" class="col-4">
+				<!-- <a class="navbar-brand">Suzuki</a> -->
+				<form class="form-inline" class="col-4">
+					<select id="search2" name="search2">
+						<option></option>
+						<option value="Ayla">Toyota Ayla</option>
+						<option value="Avanza">Toyota Avanza</option>
+					</select>
+				</form>
+				<span class="col-4" style="text-align: end !important;">Lokasi</span>
+			</nav>
+		</div>
+
+		<div class="main" style="background-color: #f5f5f5 !important">
+			<!-- Carousel -->
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item active" style="height: 500px !important">
+						<img
+							src="https://promomobilsuzukibali.com/wp-content/uploads/2023/01/IMG-20220605-WA0002.jpg"
+							class="d-block w-100"
+							alt="..." />
+					</div>
+					<div class="carousel-item" style="height: 500px !important">
+						<img
+							src="https://promomobilsuzukibali.com/wp-content/uploads/2023/01/Banner-Suzuki-New-Ignis.jpg"
+							class="d-block w-100"
+							alt="..." />
+					</div>
+					<div class="carousel-item" style="height: 500px !important">
+						<img
+							src="https://promomobilsuzukibali.com/wp-content/uploads/2023/01/promo-suzuki-baleno-1.png"
+							class="d-block w-100"
+							alt="..." />
+					</div>
+					<div class="carousel-item" style="height: 500px !important">
+						<img
+							src="https://promomobilsuzukibali.com/wp-content/uploads/2023/01/Banner-web-new-carry-760x410-1.jpg"
+							class="d-block w-100"
+							alt="..." />
+					</div>
+					<div class="carousel-item" style="height: 500px !important">
+						<img
+							src="https://promomobilsuzukibali.com/wp-content/uploads/2023/01/banner-suzuki-new-xl7-1024x372-1.jpg"
+							class="d-block w-100"
+							alt="..." />
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</button>
+			</div>
+			<!-- End Carousel -->
+
+			<!-- Section Type Car -->
+			<section class="section-type" style="background-color: white">
+				<div class="container bg-white" style="height: 300px">
+					<div class="card shadow" style="margin-top: -60px; border-radius: 10px">
+						<div class="card-body">
+							<h1 style="font-size: 24px !important; font-weight: 700">Cari Tipe Mobil Anda</h1>
+						</div>
+						<div class="card-deck mb-4 p-3 text-center">
+							<div class="card" id="mpv-car" style="border-radius: 20px">
+								<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/mpv.png" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">MPV</h5>
+									<p class="card-text">MPV Suzuki</p>
+								</div>
+							</div>
+							<div class="card" id="mpv-car" style="border-radius: 20px">
+								<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/suv.png" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">SUV</h5>
+									<p class="card-text">SUV Suzuki</p>
+								</div>
+							</div>
+							<div class="card" id="mpv-car" style="border-radius: 20px">
+								<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/crossover.png" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Crossover</h5>
+									<p class="card-text">SUV Suzuki</p>
+								</div>
+							</div>
+							<div class="card" id="mpv-car" style="border-radius: 20px">
+								<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/hatchback.png" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Hatchback</h5>
+									<p class="card-text">SUV Suzuki</p>
+								</div>
+							</div>
+							<div class="card" id="mpv-car" style="border-radius: 20px">
+								<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/sedan.png" alt="" />
+								<div class="card-body">
+									<h5 class="card-title">Sedan</h5>
+									<p class="card-text">SUV Suzuki</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Section Type Car -->
+
+			<!-- Section Best Seller -->
+			<section class="mb-3" id="best-seller" style="box-shadow: 0 -5px 5px -5px rgba(0,0,0,.15);">
+				<div class="card">
+					<div class="container">
+						<div class="card-body">
+							<h1 style="font-size: 22px !important">Best Seller</h1>
+						</div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card-wrapper d-flex mb-4 col-12">
+                                        <div class="card mr-2" style="box-shadow: 4px 4px 6px 0px #ccc;">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2" style="box-shadow: 4px 4px 6px 0px #ccc;">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2" style="box-shadow: 4px 4px 6px 0px #ccc;">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2" style="box-shadow: 4px 4px 6px 0px #ccc;">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <p>Slide 2</p>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>						
+					</div>
+				</div>
+			</section>
+			<!-- End Section Best Seller -->    
+            
+            <!-- Section Cars Promo -->
+            <section class="mb-3" id="promo-car" style="box-shadow: 0 -5px 5px -5px rgba(0,0,0,.15);">
+                <div class="card">
+					<div class="container">
+						<div class="card-body">
+							<h1 style="font-size: 22px !important">Promo</h1>
+						</div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card-wrapper d-flex mb-4 col-12">
+                                        <div class="card mr-2">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <p>Slide 2</p>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>						
+					</div>
+				</div>
+            </section>
+            <!-- End Section Car Promotion -->
+
+            <!-- Section New Cars -->
+            <section>
+                <div class="card">
+					<div class="container">
+						<div class="card-body">
+							<h1 style="font-size: 22px !important">New Cars</h1>
+						</div>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card-wrapper d-flex mb-4 col-12">
+                                        <div class="card mr-2">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/153/2727/chery-omoda-5-64150.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/153/2727/chery-omoda-5-64150.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/153/2727/chery-omoda-5-64150.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="card mr-2">
+                                            <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/153/2727/chery-omoda-5-64150.jpg" alt="Card image cap" />
+                                            <div class="card-body">
+                                                <h5 class="card-title">Suzuki Mobilio</h5>
+                                                <p class="card-text">Rp. 300.000</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <p>Slide 2</p>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                        </div>						
+					</div>
+				</div>
+            </section>
+            <!-- End Section New Cars -->
+
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#search2").select2({
+				placeholder: "Cari Mobil",
+				allowClear: true,
+			});
+			const swiper = new Swiper(".swiper", {
+				// Optional parameters
+				direction: "horizontal",
+				loop: false,
+
+				// If we need pagination
+				pagination: {
+					el: ".swiper-pagination",
+				},
+
+				// Navigation arrows
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+
+				// And if we need scrollbar
+				scrollbar: {
+					el: ".swiper-scrollbar",
+				},
+			});
+		});
+	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+		crossorigin="anonymous"></script>
+</html>
