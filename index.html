@@ -26,9 +26,15 @@
 			integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
 			crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet" />
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<style>
+			body {
+				font-family: "Poppins", sans-serif;
+			}
 			nav.navbar {
 				height: 68px;
 			}
@@ -56,6 +62,9 @@
 			.swiper-button-prev.swiper-button-disabled {
 				display: none !important;
 			}
+			.swiper-button-next.swiper-button-disabled {
+				display: none !important;
+			}
 
 			#mpv-car {
 				border: 2px solid black;
@@ -75,17 +84,42 @@
 				box-shadow: 4px 4px 6px 0px #ccc;
 			}
 
-            .sec1{
-                margin-top: -60px; 
-                position: relative; 
-                z-index: 99; 
-                border-radius: 10px
+			.sticky-wrapper .site-navbar .site-logo a {
+				color: black;
+			}
+
+			.sticky-wrapper .site-navbar .site-menu > li > a {
+				color: #000 !important;
+			}
+
+			.sticky-wrapper .site-navbar .site-menu-toggle {
+				color: #000 !important;
+			}
+
+			.sticky-wrapper .site-navbar .site-menu > li > a:hover,
+			.sticky-wrapper .site-navbar .site-menu > li > a.active {
+				color: #12a7c8 !important;
+			}
+
+			.sec1 {
+				margin-top: -60px;
+				position: relative;
+				z-index: 99;
+				border-radius: 10px;
+			}
+
+            .title-type-car{
+                font-weight: 700;
+            }
+
+            .text-type-car{
+                margin-top: -0.75rem;
             }
 
 			@media only screen and (max-width: 600px) {
-                .sec1{
-                    margin-top: 0px; 
-                }
+				.sec1 {
+					margin-top: 0px;
+				}
 			}
 		</style>
 	</head>
@@ -104,14 +138,14 @@
 				<div class="row align-items-center">
 					<div class="col-6 col-xl-2">
 						<h1 class="mb-0 site-logo">
-							<a href="index.html">Suzuki<span class="text-primary">.</span> </a>
+							<img src="https://promomobilsuzukibali.com/wp-content/uploads/2023/01/banner-logo-suzuki.png" alt="" width="200px" />
 						</h1>
 					</div>
 
 					<div class="col-12 col-md-10 d-none d-xl-block">
 						<nav class="site-navigation position-relative text-right" role="navigation">
 							<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-								<li><a href="#home-section" class="nav-link">Home</a></li>
+								<li><a href="#home-section" class="nav-link text-dark">Home</a></li>
 								<li class="has-children">
 									<a href="#about-section" class="nav-link">About Us</a>
 									<ul class="dropdown">
@@ -209,13 +243,13 @@
 						<h1 style="font-size: 24px !important; font-weight: 700">Cari Tipe Mobil Anda</h1>
 					</div>
 					<div class="swiper">
-						<div class="swiper-wrapper">
+						<div class="swiper-wrapper text-center">
 							<div class="swiper-slide">
 								<div class="card mb-4" id="mpv-car" style="border-radius: 20px">
 									<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/mpv.png" alt="" />
 									<div class="card-body">
-										<h5 class="card-title">MPV</h5>
-										<p class="card-text">MPV Suzuki</p>
+										<h5 class="card-title title-type-car">MPV</h5>
+										<p class="card-text text-type-car">MPV Suzuki</p>
 									</div>
 								</div>
 							</div>
@@ -223,8 +257,8 @@
 								<div class="card" id="mpv-car" style="border-radius: 20px">
 									<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/suv.png" alt="" />
 									<div class="card-body">
-										<h5 class="card-title">SUV</h5>
-										<p class="card-text">SUV Suzuki</p>
+										<h5 class="card-title title-type-car">SUV</h5>
+										<p class="card-text text-type-car">SUV Suzuki</p>
 									</div>
 								</div>
 							</div>
@@ -232,8 +266,8 @@
 								<div class="card" id="mpv-car" style="border-radius: 20px">
 									<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/crossover.png" alt="" />
 									<div class="card-body">
-										<h5 class="card-title">Crossover</h5>
-										<p class="card-text">SUV Suzuki</p>
+										<h5 class="card-title title-type-car">Crossover</h5>
+										<p class="card-text text-type-car">SUV Suzuki</p>
 									</div>
 								</div>
 							</div>
@@ -241,8 +275,8 @@
 								<div class="card" id="mpv-car" style="border-radius: 20px">
 									<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/hatchback.png" alt="" />
 									<div class="card-body">
-										<h5 class="card-title">Hatchback</h5>
-										<p class="card-text">SUV Suzuki</p>
+										<h5 class="card-title title-type-car">Hatchback</h5>
+										<p class="card-text text-type-car">SUV Suzuki</p>
 									</div>
 								</div>
 							</div>
@@ -250,8 +284,8 @@
 								<div class="card" id="mpv-car" style="border-radius: 20px">
 									<img class="center-img mt-2" src="https://imgcdn.oto.com/filter/mobil/sedan.png" alt="" />
 									<div class="card-body">
-										<h5 class="card-title">Sedan</h5>
-										<p class="card-text">SUV Suzuki</p>
+										<h5 class="card-title title-type-car">Sedan</h5>
+										<p class="card-text text-type-car">SUV Suzuki</p>
 									</div>
 								</div>
 							</div>
@@ -268,13 +302,13 @@
 				<div class="card">
 					<div class="container">
 						<div class="card-body">
-							<h1 style="font-size: 22px !important">Best Seller</h1>
+							<h1 style="font-size: 24px !important; font-weight: 700">Best Seller</h1>
 						</div>
 						<div class="swiper">
 							<div class="swiper-wrapper">
 								<div class="swiper-slide">
 									<div class="card-wrapper d-flex mb-4">
-										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc">
+										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
 											<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
 											<div class="card-body">
 												<h5 class="card-title">Suzuki Mobilio</h5>
@@ -286,7 +320,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="card-wrapper d-flex mb-4">
-										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc">
+										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
 											<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
 											<div class="card-body">
 												<h5 class="card-title">Suzuki Mobilio</h5>
@@ -298,7 +332,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="card-wrapper d-flex mb-4">
-										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc">
+										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
 											<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
 											<div class="card-body">
 												<h5 class="card-title">Suzuki Mobilio</h5>
@@ -310,7 +344,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="card-wrapper d-flex mb-4">
-										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc">
+										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
 											<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
 											<div class="card-body">
 												<h5 class="card-title">Suzuki Mobilio</h5>
@@ -322,7 +356,7 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="card-wrapper d-flex mb-4">
-										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc">
+										<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
 											<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
 											<div class="card-body">
 												<h5 class="card-title">Suzuki Mobilio</h5>
@@ -346,7 +380,7 @@
 				<div class="card">
 					<div class="container">
 						<div class="card-body">
-							<h1 style="font-size: 22px !important">Promo</h1>
+							<h1 style="font-size: 24px !important; font-weight: 700">Promo</h1>
 						</div>
 						<div class="swiper">
 							<div class="swiper-wrapper">
@@ -448,7 +482,7 @@
 				<div class="card">
 					<div class="container">
 						<div class="card-body">
-							<h1 style="font-size: 22px !important">New Cars</h1>
+							<h1 style="font-size: 24px !important; font-weight: 700">Mobil Baru</h1>
 						</div>
 						<div class="swiper">
 							<div class="swiper-wrapper">
@@ -557,8 +591,12 @@
 						spaceBetween: 40,
 					},
 					640: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+					900: {
 						slidesPerView: 4,
-						spaceBetween: 50,
+						spaceBetween: 20,
 					},
 				},
 			});
