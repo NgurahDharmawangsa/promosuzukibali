@@ -122,12 +122,14 @@
               .css('position', 'absolute')
               .css('top', '')
               .css('bottom', 0)
+              .css('background-color', '#f5f5f5')
               .css('z-index', '');
           } else {
             s.stickyElement
               .css('position', 'fixed')
               .css('top', newTop)
               .css('bottom', '')
+              .css('background-color', '#ffffff')
               .css('z-index', s.zIndex);
           }
         }
