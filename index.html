@@ -150,8 +150,12 @@
 			.wrapper-content {
 				padding-left: 0.5rem !important;
 				padding-right: 0.5rem !important;
-                padding-top: 1.5rem !important;
-                padding-bottom: 1.5rem !important;
+				padding-top: 1.5rem !important;
+				padding-bottom: 1.5rem !important;
+			}
+
+			#sticky-wrapper.sticky-wrapper {
+				background-color: #f5f5f5 !important;
 			}
 
 			@media only screen and (min-width: 600px) {
@@ -176,9 +180,9 @@
 
 				.wrapper-content {
 					padding-left: 0.5rem !important;
-                    padding-right: 0rem !important;
-                    padding-top: 0rem !important;
-                padding-bottom: 0rem !important;
+					padding-right: 0rem !important;
+					padding-top: 0rem !important;
+					padding-bottom: 0rem !important;
 				}
 
 				.carousel.slide {
@@ -215,7 +219,9 @@
 				.swiper-button-next {
 					display: none;
 				}
-
+                .card-promo{
+                    width: 100%;
+                }
 				#mpv-car {
 					background-color: #42d3c4;
 					color: white;
@@ -244,9 +250,11 @@
 					display: none;
 				}
 
-                #section-ertiga, #section-xl7, #section-carry{
-                    display: none;
-                }
+				#section-ertiga,
+				#section-xl7,
+				#section-carry {
+					display: none;
+				}
 			}
 		</style>
 	</head>
@@ -380,7 +388,7 @@
 			<section class="section-type" style="background-color: white">
 				<div class="container bg-white shadow sec1">
 					<div class="wrapper-content">
-						<h1 class="title-card py-3">Cari Tipe Mobil Anda</h1>
+						<h1 class="title-card py-3" style="font-family: Poppins, sans-serif;">Cari Tipe Mobil Anda</h1>
 						<div class="swiper">
 							<div class="swiper-wrapper text-center">
 								<div class="swiper-slide">
@@ -461,7 +469,11 @@
 						<div class="col-md-6 d-flex justify-content-center">
 							<!-- images -->
 							<div class="position-relative">
-								<img src="https://imgcdn.oto.com/medium/gallery/exterior/37/332/suzuki-ertiga-front-angle-low-view-561755.jpg" alt="" class=" " style="border-radius: 10px; box-shadow: 4px 4px 6px 0px #ccc;" />
+								<img
+									src="https://imgcdn.oto.com/medium/gallery/exterior/37/332/suzuki-ertiga-front-angle-low-view-561755.jpg"
+									alt=""
+									class=" "
+									style="border-radius: 10px; box-shadow: 4px 4px 6px 0px #ccc" />
 							</div>
 						</div>
 					</div>
@@ -476,7 +488,7 @@
 						<div class="col-md-6 d-flex justify-content-center">
 							<!-- images -->
 							<div class="position-relative">
-								<img src="https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg" alt="" class=" " style="border-radius: 10px; box-shadow: 4px 4px 6px 0px #ccc;" />
+								<img src="https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg" alt="" class=" " style="border-radius: 10px; box-shadow: 4px 4px 6px 0px #ccc" />
 							</div>
 						</div>
 						<!-- col -->
@@ -519,7 +531,11 @@
 						<div class="col-md-6 d-flex justify-content-center">
 							<!-- images -->
 							<div class="position-relative">
-								<img src="https://imgcdn.oto.com/medium/gallery/exterior/37/2158/suzuki-carry-front-angle-low-view-924731.jpg" alt="" class=" " style="border-radius: 10px; box-shadow: 4px 4px 6px 0px #ccc;" />
+								<img
+									src="https://imgcdn.oto.com/medium/gallery/exterior/37/2158/suzuki-carry-front-angle-low-view-924731.jpg"
+									alt=""
+									class=" "
+									style="border-radius: 10px; box-shadow: 4px 4px 6px 0px #ccc" />
 							</div>
 						</div>
 					</div>
@@ -702,192 +718,12 @@
 				</div>
 			</section>
 
-			<!-- Section Best Seller -->
-			<section id="best-seller" class="mb-3" style="box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.5)">
-				<div class="card">
-					<div class="container sec2">
-						<div class="wrapper-content">
-							<h1 class="title-card py-3">Best Seller</h1>
-							<div class="swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="card-wrapper d-flex mb-4">
-											<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
-												<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/332/suzuki-ertiga-53732.jpg" alt="Card image cap" />
-												<div class="card-body">
-													<h5 class="card-title" style="font-weight: 500">All New Ertiga</h5>
-													<p class="card-text" style="color: black; font-weight: 700">Rp. 267 - 308,5 Juta</p>
-													<p class="card-text"><small class="text-muted">Lihat Detail</small></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="card-wrapper d-flex mb-4">
-											<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
-												<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg" alt="Card image cap" />
-												<div class="card-body">
-													<h5 class="card-title" style="font-weight: 500">Suzuki XL 7</h5>
-													<p class="card-text" style="color: black; font-weight: 700">Rp. 292 - 336 Juta</p>
-													<p class="card-text"><small class="text-muted">Lihat Detail</small></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="card-wrapper d-flex mb-4">
-											<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
-												<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/2158/suzuki-carry-front-angle-low-view-924731.jpg" alt="Card image cap" />
-												<div class="card-body">
-													<h5 class="card-title" style="font-weight: 500">Carry Pick Up</h5>
-													<p class="card-text" style="color: black; font-weight: 700">Rp. 185 - 195 Juta</p>
-													<p class="card-text"><small class="text-muted">Lihat Detail</small></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- <div class="swiper-slide">
-                                        <div class="card-wrapper d-flex mb-4">
-                                            <div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
-                                                <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Suzuki Mobilio</h5>
-                                                    <p class="card-text">Rp. 300.000</p>
-                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card-wrapper d-flex mb-4">
-                                            <div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px">
-                                                <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/14/98/honda-mobilio-14756.jpg" alt="Card image cap" />
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Suzuki Mobilio</h5>
-                                                    <p class="card-text">Rp. 300.000</p>
-                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-								</div>
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- End Section Best Seller -->
-
-			<!-- Section Cars Promo -->
-			<section id="promo-car" class="mb-3" style="box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.5)">
-				<div class="card">
-					<div class="container sec2">
-						<div class="wrapper-content">
-							<h1 class="title-card py-3">Promo</h1>
-							<div class="swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="card-wrapper d-flex mb-4">
-											<div class="card card-promo">
-												<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/1362/suzuki-ignis-front-angle-low-view-859722.jpg" alt="Card image cap" />
-												<div class="card-body">
-													<h5 class="card-title" style="font-weight: 500">All New Ignis</h5>
-													<p class="card-text" style="color: black; font-weight: 700">Rp. 230 - 240 Juta</p>
-													<p class="card-text"><small class="text-muted">Lihat Detail</small></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="card-wrapper d-flex mb-4">
-											<div class="card card-promo">
-												<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/2620/suzuki-s-presso-front-angle-low-view-628835.jpg" alt="Card image cap" />
-												<div class="card-body">
-													<h5 class="card-title" style="font-weight: 500">Suzuki S-Presso</h5>
-													<p class="card-text" style="color: black; font-weight: 700">Rp. 189 - 199 Juta</p>
-													<p class="card-text"><small class="text-muted">Lihat Detail</small></p>
-												</div>
-											</div>
-										</div>
-									</div>
-									<!-- <div class="swiper-slide">
-                                        <div class="card-wrapper d-flex mb-4">
-                                            <div class="card card-promo">
-                                                <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Suzuki Mobilio</h5>
-                                                    <p class="card-text">Rp. 300.000</p>
-                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card-wrapper d-flex mb-4">
-                                            <div class="card card-promo">
-                                                <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Suzuki Mobilio</h5>
-                                                    <p class="card-text">Rp. 300.000</p>
-                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card-wrapper d-flex mb-4">
-                                            <div class="card card-promo">
-                                                <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Suzuki Mobilio</h5>
-                                                    <p class="card-text">Rp. 300.000</p>
-                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card-wrapper d-flex mb-4">
-                                            <div class="card card-promo">
-                                                <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Suzuki Mobilio</h5>
-                                                    <p class="card-text">Rp. 300.000</p>
-                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card-wrapper d-flex mb-4">
-                                            <div class="card card-promo">
-                                                <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/1/12/audi-r8-10813.jpg" alt="Card image cap" />
-                                                <div class="card-body">
-                                                    <h5 class="card-title">Suzuki Mobilio</h5>
-                                                    <p class="card-text">Rp. 300.000</p>
-                                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> -->
-								</div>
-								<div class="swiper-button-prev"></div>
-								<div class="swiper-button-next"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- End Section Car Promotion -->
-
 			<!-- Section All Cars -->
-			<section id="all-car" style="box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.5)">
+			<section id="all-car" class="mb-3" style="box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.5)">
 				<div class="card">
 					<div class="container sec2">
 						<div class="wrapper-content">
-							<h1 class="title-card py-3">Semua Mobil</h1>
+							<h1 class="title-card py-3" style="font-family: Poppins, sans-serif;">Semua Mobil</h1>
 							<div class="swiper">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
@@ -971,6 +807,92 @@
 				</div>
 			</section>
 			<!-- End Section All Cars -->
+
+			<!-- Section Best Seller -->
+			<section id="best-seller" class="mb-3" style="box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.5)">
+				<div class="card">
+					<div class="container">
+						<h1 class="title-card py-3" style="font-family: Poppins, sans-serif;">Best Seller</h1>
+						<div class="row">
+							<div class="col-12">
+								<div class="card-wrapper d-flex mb-4">
+									<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px; width: 100%">
+										<img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/332/suzuki-ertiga-53732.jpg" alt="Card image cap" style="height: 160px; object-fit: cover;"/>
+										<div class="card-body">
+											<h5 class="card-title" style="font-family: Poppins, sans-serif;">All New Ertiga</h5>
+											<p class="card-text" style="color: black; font-weight: 700">Rp. 267 - 308,5 Juta</p>
+											<p class="card-text"><small class="text-muted">Lihat Detail</small></p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="card-wrapper d-flex mb-4">
+									<div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px; width: 100%;">
+                                        <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/2220/suzuki-xl7-12009.jpg" alt="Card image cap" style="height: 160px; object-fit: cover;" />
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="font-family: Poppins, sans-serif;">Suzuki XL 7</h5>
+                                            <p class="card-text" style="color: black; font-weight: 700">Rp. 292 - 336 Juta</p>
+                                            <p class="card-text"><small class="text-muted">Lihat Detail</small></p>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="card-wrapper d-flex mb-4">
+                                    <div class="card" style="box-shadow: 4px 4px 6px 0px #ccc; border-radius: 10px; width: 100%;">
+                                        <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/2158/suzuki-carry-front-angle-low-view-924731.jpg" alt="Card image cap" style="height: 160px; object-fit: cover;" />
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="font-family: Poppins, sans-serif;">Carry Pick Up</h5>
+                                            <p class="card-text" style="color: black; font-weight: 700">Rp. 185 - 195 Juta</p>
+                                            <p class="card-text"><small class="text-muted">Lihat Detail</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Section Best Seller -->
+
+			<!-- Section Cars Promo -->
+			<section id="promo-car" class="mb-3" style="box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.5)">
+				<div class="card">
+					<div class="container">					
+						<h1 class="title-card py-3" style="font-family: Poppins, sans-serif;">Promo</h1>		
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-wrapper d-flex mb-4">
+                                    <div class="card card-promo">
+                                        <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/1362/suzuki-ignis-front-angle-low-view-859722.jpg" alt="Card image cap" style="height: 160px; object-fit: cover;"/>
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="font-family: Poppins, sans-serif;">All New Ignis</h5>
+                                            <p class="card-text" style="color: black; font-weight: 700">Rp. 230 - 240 Juta</p>
+                                            <p class="card-text"><small class="text-muted">Lihat Detail</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-wrapper d-flex mb-4">
+                                    <div class="card card-promo">
+                                        <img class="card-img-top" src="https://imgcdn.oto.com/medium/gallery/exterior/37/2620/suzuki-s-presso-front-angle-low-view-628835.jpg" alt="Card image cap" style="height: 160px; object-fit: cover;"/>
+                                        <div class="card-body">
+                                            <h5 class="card-title" style="font-family: Poppins, sans-serif;">Suzuki S-Presso</h5>
+                                            <p class="card-text" style="color: black; font-weight: 700">Rp. 189 - 199 Juta</p>
+                                            <p class="card-text"><small class="text-muted">Lihat Detail</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>	
+					</div>
+				</div>
+			</section>
+			<!-- End Section Car Promotion -->
 		</div>
 	</body>
 	<script type="text/javascript">
@@ -1015,7 +937,11 @@
 						slidesPerView: 2.5,
 						spaceBetween: 30,
 					},
-					900: {
+					1100: {
+						slidesPerView: 3.5,
+						spaceBetween: 20,
+					},
+					1280: {
 						slidesPerView: 4.5,
 						spaceBetween: 20,
 					},

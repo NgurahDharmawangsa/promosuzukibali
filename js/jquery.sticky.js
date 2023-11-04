@@ -121,15 +121,13 @@
             s.stickyElement
               .css('position', 'absolute')
               .css('top', '')
-              .css('bottom', 0)
-              .css('background-color', '#f5f5f5')
+              .css('bottom', 0)              
               .css('z-index', '');
           } else {
             s.stickyElement
               .css('position', 'fixed')
               .css('top', newTop)
-              .css('bottom', '')
-              .css('background-color', '#ffffff')
+              .css('bottom', '')              
               .css('z-index', s.zIndex);
           }
         }
