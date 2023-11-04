@@ -41,12 +41,13 @@
 			.select2.select2-container.select2-container--default {
 				width: 400px !important;
 			}
-			.select2-selection.select2-selection--single {
-				background-color: #f5f5f5;
+			.select2-selection.select2-selection--multiple {
+				/* background-color: #f5f5f5; */
 				height: 48px;
 				border: 0px;
 				border-radius: 10px;
-				box-shadow: 4px 4px 6px 0px #ccc;
+				border: 0px;
+				box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
 			}
 			span.select2-selection__rendered {
 				height: 48px;
@@ -55,6 +56,9 @@
 			}
 			span.select2-selection__arrow {
 				height: 48px !important;
+			}
+			.select2-selection__clear {
+				display: none;
 			}
 
 			.title-card {
@@ -154,10 +158,6 @@
 				padding-bottom: 1.5rem !important;
 			}
 
-			#sticky-wrapper.sticky-wrapper {
-				background-color: #f5f5f5 !important;
-			}
-
 			.text-muted {
 				font-family: "Poppins", sans-serif;
 			}
@@ -174,6 +174,9 @@
 			}
 
 			@media only screen and (max-width: 600px) {
+				#sticky-wrapper.sticky-wrapper {
+					background-color: #f5f5f5 !important;
+				}
 				.sec1 {
 					margin-top: 0px;
 					padding-right: 0px !important;
@@ -184,9 +187,9 @@
 				.title-type-car {
 					font-size: 16px;
 				}
-                .text-type-car{
-                    font-size: 10px !important;
-                }
+				.text-type-car {
+					font-size: 10px !important;
+				}
 				.wrapper-content {
 					padding-left: 0.5rem !important;
 					padding-right: 0rem !important;
@@ -291,10 +294,14 @@
 							<ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
 								<li>
 									<form class="form-inline" id="form-select">
-										<select id="search2" name="search2">
+										<select id="search2" name="search2" multiple="multiple" onchange="location = this.value;">
 											<option></option>
-											<option value="Ayla">Toyota Ayla</option>
-											<option value="Avanza">Toyota Avanza</option>
+											<option value="Ayla">All New Suzuki Ertiga</option>
+											<option value="Avanza">Suzuki XL7</option>
+											<option value="./detail.html">Suzuki Carry</option>
+											<option value="Avanza">Suzuki Baleno</option>
+											<option value="Avanza">Suzuki Ignis</option>
+											<option value="Avanza">Suzuki S-Presso</option>
 										</select>
 									</form>
 								</li>
@@ -345,10 +352,14 @@
 			<div class="nav-search2-container d-flex justify-content-center" style="background-color: #f5f5f5">
 				<div class="container">
 					<form class="form-inline p-3" id="form-select-mobile">
-						<select id="search22" name="search2">
-							<option></option>
-							<option value="Ayla">Toyota Ayla</option>
-							<option value="Avanza">Toyota Avanza</option>
+						<select id="search22" name="search2" multiple="multiple" onchange="location = this.value;">
+							<!-- <option></option> -->
+							<option value=".#">All New Suzuki Ertiga</option>
+							<option value=".#">Suzuki XL7</option>
+							<option value=".#">Suzuki Carry</option>
+							<option value=".#">Suzuki Baleno</option>
+							<option value=".#">Suzuki Ignis</option>
+							<option value="./detail.html">Suzuki S-Presso</option>
 						</select>
 					</form>
 				</div>
@@ -863,11 +874,11 @@
 									</div>
 								</div>
 							</div>
-                            <div class="d-flex w-100 justify-content-center">
-                                <div class="container mb-3">
-                                    <button class="btn btn-block btn-outline-primary">Hubungi Penjual</button>
-                                </div>
-                            </div>
+							<div class="d-flex w-100 justify-content-center">
+								<div class="container mb-3">
+									<button class="btn btn-block btn-outline-primary">Hubungi Penjual</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -896,7 +907,7 @@
 									</div>
 								</div>
 							</div>
-                            <div class="col-12">
+							<div class="col-12">
 								<div class="card-wrapper d-flex mb-4">
 									<div class="card card-promo">
 										<img
@@ -912,11 +923,11 @@
 									</div>
 								</div>
 							</div>
-                            <div class="d-flex w-100 justify-content-center">
-                                <div class="container mb-3">
-                                    <button class="btn btn-block btn-outline-primary">Hubungi Penjual</button>
-                                </div>
-                            </div>
+							<div class="d-flex w-100 justify-content-center">
+								<div class="container mb-3">
+									<button class="btn btn-block btn-outline-primary">Hubungi Penjual</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

@@ -1,11 +1,13 @@
-$(document).ready(function () {
+$(document).ready(function () {    
     $("#search2").select2({
-        placeholder: "Cari Mobil",
+        placeholder: "Cari Mobil Suzuki",
         allowClear: true,
-    });
+        maximumSelectionLength: 1,
+    });    
     $("#search22").select2({
         placeholder: "Cari Mobil",
         allowClear: true,
+        maximumSelectionLength: 1,
     });
     const swiper = new Swiper(".swiper", {
         // Optional parameters
